@@ -16,7 +16,7 @@ class Category(models.Model):
         
 
     class Meta:
-        verbose_name_plural = 'categories'
+        verbose_name_plural = 'pages'
 
     def __str__(self):
         return self.name
