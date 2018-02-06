@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-
-<html>
-    <head>
-        <title>Rango</title>
-
-    </head>
-
-    <body>
-        Rango says here is the about page. <br/> 
-        <a href='/rango/'>Index</a>
+    {% extends 'rango/base.html' %}
+    {% load staticfiles %}
+    {% block title_block %}
+        About
+    {% endblock %}
+    
+    {% block body_block %}
         <div>
-           This tutorial has been put together by Elena Valkova.
-        </div>
-        <div>
-            <img src="{{MEDIA_URL}}cat.jpg"
-            alt = "Picture of a cat" />
-        </div>
-         <div>
-            <img src="{%static "images/rango.jpg"%}"
-            alt = "Picture of Rango" />
-         </div>
-    </body>
-
-</html>
+            <h1 class="page-header">About Page</h1>         
+            This tutorial has been put together by Elena Valkova.
+        </div>  
+        <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
+        <p>
+        <img src="{{MEDIA_URL}}cat.jpg" alt="Picture of a Cat">
+        </p>
+    {% endblock %}
