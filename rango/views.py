@@ -25,7 +25,7 @@ def index(request):
 def about(request):
     context_dict = {}
     visitor_cookie_handler(request)
-    context_dict['visit_count'] = request.session['visits']
+    context_dict['visits'] = request.session['visits']
     if request.session.test_cookie_worked():
         print("TEST COOKIE WORKED!")
         request.session.delete_test_cookie()
